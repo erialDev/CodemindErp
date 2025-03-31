@@ -1,4 +1,273 @@
-.cardIzq{
+.card_principal {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    width: 100vw;
+}
+
+.card_izq {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebe5e5;
+    width: 100vw;
+    height: 50%;
+}
+
+.card_text {
+    display: flex;
     position: relative;
+    top: 4rem;
+    left: 2rem;
+}
+
+.card_text p {
+    display: flex;
+    font-size: 19px;
+}
+
+.card_register {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 5rem;
+    left: 2rem;
+    gap: 5px;
+}
+
+.card_register p {
+    display: flex;
+    font-size: 15px;
+}
+
+.card_register a {
+    display: flex;
+    font-size: 15px;
+    text-decoration: underline
+}
+
+
+.card_image {
+    display: flex;
+    height: 50%;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+}
+
+.card_der {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 50%;
+}
+
+.card_form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card_login {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
+    padding-top: 8%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.form label {
+    display: flex;
+    width: 70%;
+    margin-bottom: 5%;
+    color: #898989;
+}
+
+.form input {
+    display: block;
+    width: 70%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 17px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form input:focus {
+    border-bottom: 2px solid #007bff;
+    /* Resalta el borde inferior al hacer foco */
+}
+
+.card_button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 4.5rem;
+}
+
+.card_opciones {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.card_chk {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    gap: 7px;
+    font-size: 14px;
+}
+
+.chk {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.chklabel {
+    width: 30px;
+    height: 18px;
+    border-radius: 5px;
+    border: 2px solid #9fa1a2;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.chk:checked+.chklabel {
+    background-color: #007bff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+}
+
+.chk:checked+.chklabel::after {
+    content: "✔";
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button_login {
+    width: 70%;
+    height: 98%;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #19634d, #39987c);
+    /* Degradado moderno */
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra ligera */
+    text-align: center;
+    display: inline-block;
+}
+
+.cardRecordPassword {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 29%;
+    bottom: -8%;
+    font-size: 15px;
+
+}
+
+.cardRecordPassword a {
+    text-decoration: underline;
+}
+
+@media(min-width:359px) and (max-width:374px) {
+    .button_login{
+        height: 80%;
+    }
+}
+
+
+@media (min-width: 389px) {
+
+    /* Ajustes para móviles más grandes */
+    .card_chk {
+        width: 28%;
+    }
+    
+    .chklabel {
+        height: 21px;
+    }
+
+    .button_login{
+        height: 45px;
+    }
+
+    .cardRecordPassword{
+        bottom: -4%;
+        left: 33%;
+        margin-bottom: 10%;
+    }
+
+    .image {
+        width: 450px;
+        height: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Ajustes para tablets */
+}
+
+@media (min-width: 1024px) {
+    /* Ajustes para laptops pequeñas */
+    .card_principal {
+        flex-direction: row;
+     }
+
+     .card_izq{
+        height: 100vh;
+     }
+
+     .image{
+        width: 500px;
+        height: 500px;
+     }
+
+     .card_register{
+        top: 15rem;
+     }
+
+     .card_text{
+        left: 45px;
+     }
+
+   
+
+}
+
+@media (min-width: 1280px) {
+    /* Ajustes para monitores estándar */
+  
+}
+
+@media (min-width: 1536px) {
+   
 }
